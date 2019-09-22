@@ -3,7 +3,7 @@ import React from 'react';
 class Form extends React.Component {
     render() {
         return (
-            <button>Show me the weather</button>
+            <button onClick={this.props.getLondonWeather}>Check Weather</button>
         );
     }
 };
