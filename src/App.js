@@ -2,7 +2,6 @@ import React from 'react';
 import Title from './components/Title'
 import Form from './components/Form'
 import Weather from './components/Weather'
-import { throwStatement } from '@babel/types';
 
 const API_KEY = "a1f67c78a69309a76670e182397f506c";
 
