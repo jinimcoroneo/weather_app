@@ -2,8 +2,7 @@ import React from "react";
 
 const Title = () => (
     <div>
-        <h1>London Weather</h1>
-        <p>Find out the current weather in London</p>
+        <p className="title-container__title">Weather App </p>
     </div>
 )
 export default Title;

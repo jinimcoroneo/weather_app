@@ -13,8 +13,11 @@ class App extends React.Component {
     pressure: "",
     time: ""
   }
-  getLondonWeather = async () => {
-    const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=${API_KEY}&units=metric`)
+  getWeather = async (e) => {
+    e.preventDefault();
+    const city = e.target.elements.city.value;
+    const country = e.target.elements.country.value;
+    const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${API_KEY}&units=metric`)
     const data = await api_call.json()
     this.setState({
       time: new Date().toLocaleString(),
@@ -26,16 +29,25 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Title />
-        <Form getLondonWeather={this.getLondonWeather}/>
-        <Weather 
-          time={this.state.time}
-          temperature={this.state.temperature}
-          humidity={this.state.humidity}
-        />
+        <div className="wrapper">
+          <div className="container">
+            <div className="row">
+              <div className=".col-xs-5 title-container">
+                <Title />
+              </div>
+              <div className=".col-xs-7 form-container">
+                <Form getWeather={this.getWeather} />
+                <Weather
+                  time={this.state.time}
+                  temperature={this.state.temperature}
+                  humidity={this.state.humidity}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
 }
-
 export default App;
