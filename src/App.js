@@ -20,7 +20,6 @@ class App extends React.Component {
       time: new Date().toLocaleString(),
       temperature: data.main.temp,
       humidity: data.main.humidity,
-      pressure: data.main.pressure,
     })
   };
 
@@ -33,7 +32,6 @@ class App extends React.Component {
           time={this.state.time}
           temperature={this.state.temperature}
           humidity={this.state.humidity}
-          pressure={this.state.pressure}
         />
       </div>
     );
