@@ -1,10 +1,10 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+To run this project locally 
 
-## Available Scripts
+cd into the project directory
+`cd weather_app`
 
-cd into the project directory and run
-
-### `yarn start`
+run the server by typing
+`yarn start`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
